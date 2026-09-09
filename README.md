@@ -16,7 +16,7 @@ The resource addresses above are part of the DataTF import contract. Do not rena
 ```hcl
 module "secret_scope" {
   source  = "536tech/secret-scope/databricks"
-  version = "0.1.0"
+  version = "1.0.0"
 
   name = "kv-scope"
 
