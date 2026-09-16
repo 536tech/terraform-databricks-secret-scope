@@ -64,6 +64,12 @@ The workspace pattern module checks the complete DataTF contract and its integra
 
 [Apache-2.0](LICENSE).
 
+## Input safeguards
+
+The module rejects blank required names and invalid access inputs during the plan.
+Cross-input preconditions preserve the Terraform 1.5 minimum and existing resource addresses.
+Provider and API checks still apply. These checks do not prove complete permission visibility.
+
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
