@@ -41,3 +41,19 @@ run "without_access" {
     error_message = "Empty access must omit the access resources."
   }
 }
+
+run "reject_blank_name" {
+  command = plan
+  variables {
+    name = "  "
+  }
+  expect_failures = [var.name]
+}
+
+run "reject_invalid_acl" {
+  command = plan
+  variables {
+    acls = { readers = "SELECT" }
+  }
+  expect_failures = [var.acls]
+}
